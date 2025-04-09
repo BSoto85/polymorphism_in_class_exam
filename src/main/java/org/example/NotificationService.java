@@ -2,8 +2,13 @@ package org.example;
 
 public class NotificationService {
 
+    public void sendNotification(Notification notification) {
+        notification.send();
+        notification.displayInfo();
+    }
 
     public static void main(String[] args) {
+
         NotificationService service = new NotificationService();
 
         Notification email = new EmailNotification("user@example.com", "Hello there!");
